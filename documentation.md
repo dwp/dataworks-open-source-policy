@@ -1,9 +1,18 @@
 # Documentation
 This guide aims to make it clear what information can and cannot be included in documents and designs that are made public.
 
-_**If in doubt consult with your security point of contact**_
+_**If in doubt consult with your security point of contact**_\
+\
+Documentation should be made open in order to:
+* Enable and encourage collaboration and reuse across the DWP and other Government departments
+* Reduce costs and services to manage
+* Reduce access barriers
+* Comply with Government guidelines
 
 ## Restricted Items
+In summary: secrets, personal data, vulnerabilities, and details that would greatly assist in targeting infrastructure should not be included in documentation. \
+\
+_**This list sets out examples of restricted items. It is not, and cannot be, exhaustive.**_
 1. Secret information, such as passwords, secret access keys, private keys, TOTP QR codes, etc.
 1. Network ranges and IP addresses\
 DWP currently have these classed as _sensitive_
