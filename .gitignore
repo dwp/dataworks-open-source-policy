@@ -1,0 +1,3 @@
+# Terraform for GitHub Config
+ci/terraform*
+ci/.terraform/
