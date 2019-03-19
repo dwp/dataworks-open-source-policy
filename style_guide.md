@@ -28,3 +28,7 @@ The meaning behind all policy statements should be clearly articulated:
 * It is impossible to fully prevent "unintelligent challenge", where an individual objexts to a policy statement because of some philosophical objection or simply because it is inconvenient for them. However, this approach does make it easier to address such challenges through reference to the policy.
 
 Diagrams should be in the form of an architectural pattern or be reusable as one.
+
+
+## Licensing
+	This document is made available under [the Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
