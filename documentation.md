@@ -16,9 +16,9 @@ This policy covers documentation and designs only. The policy on infrastructure 
 
 Documentation and designs should be made open wherever it is appropriate to do so:
 
-* This approach makes documents and designs more readily accessible to a broad target audience, so that they can be more easily used for their intended purpose;
-* This approach enables and encourages re-use of common standards across the DWP and other Government departments, which in turn makes collaboration easier. It also enables other parties to feed back improvements to policy and other documents, which benefits everyone.
-* Although the [Government Digital Service (GDS) guidelines on making information open-source](https://gds-operations.github.io/guidelines/) are focussed on code rather than documentation, this approach is in line with the spirit of this guidance.
+1. This approach makes documents and designs more readily accessible to a broad target audience, so that they can be more easily used for their intended purpose;
+1. This approach enables and encourages re-use of common standards across the DWP and other Government departments, which in turn makes collaboration easier. It also enables other parties to feed back improvements to policy and other documents, which benefits everyone.
+1. Although the [Government Digital Service (GDS) guidelines on making information open-source](https://gds-operations.github.io/guidelines/) are focussed on code rather than documentation, this approach is in line with the spirit of this guidance.
 
 Some documentation, such as policy and standards, should be written so that these can be openly published and shared. In general these documents should, by design, not contain any sensitive information which would prohibit their being openly published. As with every general case, there are some exceptions (for example, changes to fiscal policy would be considered sensitive if released in advance). If there is any doubt, legal and security representatives must be consulted for approval in advance of publication.
 
@@ -38,11 +38,11 @@ Reference information which could be used to support targetted attacks on DataWo
 
 Sensitive reference information can take several forms. A non-exhaustive list of these is provided below:
 
-* User credentials (usernames, passwords, secret access keys, private keys, QR codes, etc).
-* Information which identifies specific accounts or resources (AWS Account numbers including within ARNs, S3 bucket names, etc).
-* Information which DWP perceives to be sensitive (Network ranges, IP addresses, etc).
-* Service information which could enable an attacker to identify service vulnerabilities (software versions and patch levels, etc).
-* Security-specific information (results of security audits, exceptions to security policy, information on bespoke security controls, etc)
+1. User credentials (usernames, passwords, secret access keys, private keys, QR codes, etc).
+1. Information which identifies specific accounts or resources (AWS Account numbers including within ARNs, S3 bucket names, etc).
+1. Information which DWP perceives to be sensitive (Network ranges, IP addresses, etc).
+1. Service information which could enable an attacker to identify service vulnerabilities (software versions and patch levels, etc).
+1. Security-specific information (results of security audits, exceptions to security policy, information on bespoke security controls, etc)
 
 
 ## Corporate Restrictions
