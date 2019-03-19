@@ -2,14 +2,14 @@
 
 ## Purpose
 
-This document sets out local policy, for the Department for Work and Pensions (DWP) DataWorks team, on what types of documentation should be made available in the DWP public github repository, and what types of information can and cannot be included in documents and designs that are made publicly available.
+This document sets out local policy, for the Department for Work and Pensions (DWP) DataWorks team, on what types of documentation should be made available in DWP public GitHub repositories, and what types of information can and cannot be included in documents and designs that are made publicly available.
 
-It is expected that, at some point, this document will be superceded by a DWP-wide open-source documentation policy which covers the whole of the DWP public github repository.
+It is expected that, at some point, this document will be superceded by a DWP-wide open-source documentation policy which encompasses all DWP public GitHub repositories. Some useful [DWP guidance on creating open source products](https://confluence.service.dwpcloud.uk/pages/viewpage.action?title=Guidance+on+creating+open+source+products&spaceKey=EN) currently exists, but this is focused on code rather than documentation and designs, and it has not yet been made open-source.
 
 
 ## Scope
 
-This policy covers documentation and designs only. The policy on infrastructure and application code will be covered either by a separate document, or by a future revision of this document.
+This policy covers documentation and designs only. The policy on infrastructure and application code will be covered by a separate document.
 
 
 ## General Approach
