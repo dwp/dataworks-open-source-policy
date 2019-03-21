@@ -50,5 +50,10 @@ Sensitive reference information can take several forms. A non-exhaustive list of
 DWP corporate policies apply. All publication in open repositories must be compliant with DWP corporate policies.
 
 
+## Commercial Restrictions
+
+Commercially sensitive information must not be published in open repositories.
+
+
 ## Licensing
 This document is made available under [the Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
