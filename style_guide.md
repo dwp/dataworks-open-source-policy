@@ -31,4 +31,4 @@ Diagrams should be in the form of an architectural pattern or be reusable as one
 
 
 ## Licensing
-	This document is made available under [the Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+This document is made available under [the Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
