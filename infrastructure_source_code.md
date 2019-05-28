@@ -14,8 +14,9 @@ This policy covers infrastructure code. Please refer to the [index](README.md#in
 
 Infrastructure code should be made open wherever it is appropriate to do so:
 
-This approach makes code more readily accessible to a broad target audience, so that they can be more easily used for their intended purpose;
-1. This approach enables and encourages re-use of common standards across the DWP and other Government departments, which in turn makes collaboration easier. It also enables other parties to feed back improvements, which benefits everyone.
+1. Code is more readily accessible to a broad target audience, so that they can be more easily used for their intended purpose;
+1. Onboarding and access requirements are much simpler and quicker for new team members.
+1. That it enables and encourages re-use of common standards across the DWP and other Government departments, which in turn makes collaboration easier. It also enables other parties to use, extend and feed back improvements, which benefits everyone.
 1. This policy is in line with the spirit of the  [Government Digital Service (GDS) guidelines on making information open-source](https://gds-operations.github.io/guidelines/).
 
 ## Security Restrictions
@@ -25,7 +26,11 @@ Reference information which could be used to support targeted attacks on DataWor
 Sensitive reference information can take several forms. A non-exhaustive list of these is provided below:
 
 1. User credentials (usernames, passwords, secret access keys, private keys, QR codes, etc).
+1. User access levels and permissions (roles, groups, permissions, security clearance level, etc.)
 1. Information which identifies specific accounts or resources (AWS Account numbers including within ARNs, S3 bucket names, etc).
+    1. This will require excluding Terraform state files and `terraform.tfvars`
+    1. Terraform config (i.e. `terraform.tf`) will have to programmatically rendered from template
+    1. Sensitive Terraform Local Values will have to programmatically rendered from template
 1. Information which DWP perceives to be sensitive (IP addresses, network ranges, etc).
 1. Service information which could enable an attacker to identify service vulnerabilities (software versions and patch levels, etc).
 
