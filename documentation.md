@@ -59,5 +59,16 @@ Commercially sensitive information must not be published in open repositories.
 If there is any doubt or uncertainty, approval from the DWP legal team must be obtained before publication.
 
 
+## Dealing With a Breach
+
+If any of the above restrictions are breached, however trivial the breach may be, the product owner and project security representative _must be informed as soon as possible_.
+
+Release of certain sensitive information such as access credentials would require a security incident to be raised. If citizens' personal data has been, or may have been, compromised part of the response to this security incident would be for the DWP security team to report this to the Information Commissioners Office. Such breaches would need to be treated with the utmost seriousness and must be escalated to the security team at the earliest possible opportunity.
+
+For other restricted DWP-specific information, such as account numbers, it may be sufficient to simply: fix the problem; record the incident; and learn lessons to reduce the likelihood or the breach recurring.
+
+In all cases, the offending information must be removed and git history re-written to remove traces of the change. This is non-trivial (and of course cannot compensate for any local clones of the repo which may have been made in the interim). The guidance [Removing Sensitive Data from GitHub Repositories](https://github.com/dwp/dataworks-open-source-policy/removing_sensitive_data_from_github_repositories.md) has details on how to do this.
+
+
 ## Licensing
 This document is made available under [the Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
