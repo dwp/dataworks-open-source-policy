@@ -21,6 +21,8 @@ Infrastructure code should be made open wherever it is appropriate to do so:
 
 ## Security Restrictions
 
+Real data or obfuscated data should never be included in code, this includes for testing, examples or comments. Synthetic data should be used if required.
+
 Reference information which could be used to support targeted attacks on DataWorks or other DWP resources must not be published in open repositories.
 
 Sensitive reference information can take several forms. A non-exhaustive list of these is provided below:
