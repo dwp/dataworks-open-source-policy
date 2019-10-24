@@ -10,10 +10,11 @@ _**If in doubt consult with your security point of contact**_
 The policies in this repo should be split into separate files, but linked to from this readme.
 
 # Index
-1. [Documentation](documentation.md)
+1. [Top-Level Policy](open_source_policy.md)
+1. [Documentation & Designs](documentation.md)
 1. [Infrastructure Source Code](infrastructure_source_code.md)
 
 
 # TODO: Document guidance on the following
-- [ ] Procedures
 - [ ] Application source code
+- [ ] Procedures
