@@ -29,9 +29,9 @@ Some documentation, such as local procedures, results of security audits, etc wi
 
 ## Restrictions
 
-The general restrictions set out in the [top-level open-source policy](https://github.com/dwp/dataworks-open-source-policy/blob/master/open_source_policy.md) apply universally for all open-source documentation. All of the restrictions set out in that document _must_ be adhered to for all documentation and designs.
+The general restrictions set out in the [top-level open-source policy](https://github.com/dwp/dataworks-open-source-policy/blob/master/open_source_policy.md) apply universally for all open-source information. All of the restrictions set out in that document _must_ be adhered to for all documentation and designs.
 
-A common challenges for documentation and designs is the tendency for network information such as IP addresses to creep into the designs.
+A common challenge for documentation and designs is the tendency for network information such as IP addresses to creep into the designs.
 
 Also, low-level designs tend to be rich sources of service information (and in some cases security-specific information) so these may need careful sanitisation or to be hosted elsewhere.
 
