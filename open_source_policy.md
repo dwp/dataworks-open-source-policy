@@ -14,9 +14,7 @@ This is the top-level policy:
 
 ## General Approach
 
-As a conceptual guide, documentations, designs and code which are presented in a generic form, so that they can be re-used without modification by other parties for different projects with similar goals, are probably suitable for open-source publication subject to the limitations of this document and it's related/supporting documentation.
-
-As a similar conceptual guide, information which is specific to DWP, or specific to infrastructure which supports DWP services, is probably not suitable for open-source publication unless this can reasonably be abstracted to a point where it can be made more widely useful to the open-source community.
+As a conceptual guide, information which is specific to DWP, or specific to infrastructure which supports DWP services, is generally not suitable for open-source publication. Information which is presented in a generic form, so that it can be re-used without modification by other parties for different projects with similar goals, is probably suitable for open-source publication subject to the limitations of: DWP policy; and of this document and it's related/supporting documentation.
 
 
 ## Legal Restrictions
@@ -32,7 +30,7 @@ Reference information which could be used to support targetted attacks on DataWo
 
 Sensitive reference information can take several forms. A non-exhaustive list of these is provided below:
 
-1. Personal data, as set out in more detail within the [Legal Restrictions](#legal-restrictions) section above.
+1. Personal data or any other information detailed within the [legal restrictions](#legal-restrictions) section of this document.
 1. User credentials (usernames, passwords, secret access keys, private keys, QR codes, etc).
 1. Information which identifies specific accounts or resources (AWS Account numbers including within ARNs, S3 bucket names, etc).
 1. Information which DWP perceives to be sensitive (IP addresses, network ranges, etc).

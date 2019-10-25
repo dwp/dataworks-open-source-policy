@@ -25,12 +25,12 @@ Infrastructure code should be made open wherever it is appropriate to do so, so 
 
 All code published on open repositories must be subject to rigorous version control. Our consumption of open-source code and artefacts must be based on robust validation (e.g. version and hash), to provide assurance that the code and artefacts which we use are the ones which we have legitimately published and to protect against Man-In-The-Middle attacks.
 
-It is to be expected that, when developing code, "grey areas" will arise where there is uncertainty as to whether this code might reasonably be considered to be valuable to an attacker. Wherever such a security question or grey area arises, the team's embedded security architecture resource should be consulted for a response _before raising the relevant pr_.
+It is to be expected that, when developing code, "grey areas" will arise where there is uncertainty as to whether this code might reasonably be considered to be valuable to an attacker. Wherever such a security question or grey area arises, the team's embedded security representative must be consulted for a response _before pushing the relevant change to an open-source repository_.
 
 
 ## Restrictions
 
-The general restrictions set out in the [top-level open-source policy](https://github.com/dwp/dataworks-open-source-policy/blob/master/open_source_policy.md) apply universally for all open-source documentation. All of the restrictions set out in that document _must_ be adhered to for all documentation and designs.
+The general restrictions set out in the [top-level open-source policy](https://github.com/dwp/dataworks-open-source-policy/blob/master/open_source_policy.md) apply universally for all open-source information. All of the restrictions set out in that document _must_ be adhered to for all code.
 
 Real data or obfuscated data should never be included in code, this includes for testing, examples or comments. Synthetic data should be used if required.
 
