@@ -10,7 +10,7 @@ This is the top-level policy:
 * Specific policy covering open-source __documentation__ can be found at https://github.com/dwp/dataworks-open-source-policy/blob/master/documentation.md
 * Specific policy covering open-source __infrastructure code__ can be found at https://github.com/dwp/dataworks-open-source-policy/blob/master/infrastructure_source_code.md
 * Specific policy covering open-source __application code__ is in development.
-* Guidance covering __general good practice__ when working in open-source repositories is in development.
+* Guidance covering __general good practice__ when working in open-source repositories is in development, and can be found at https://github.com/dwp/dataworks-open-source-policy/blob/master/general_good_practice.md
 
 
 ## General Approach
