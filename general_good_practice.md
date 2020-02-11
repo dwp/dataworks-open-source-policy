@@ -35,7 +35,7 @@ ONLY IF NECESSARY, use the following command to generate a gpg keypair. In gener
 
 `gpg --full-generate-key`
 
-Note: you will need an RSA key for github, and this will need to be at least 4096 bits long.
+Note: you will need an RSA key for github, and this will need to be at least 4096 bits long. The email address will also need to match an email address associated with your github user account.
 
 The following command will return the Key IDs for all your gpg keypairs, including the Key ID for the key which you wish to use:
 
@@ -49,7 +49,7 @@ At this point, it is probably prudent to check that the github config has been u
 
 `git config --global --list`
 
-Note that, in the output of the above command `user.email` should be one of the email addresses that is assigned to your github user. If this is not the case, then your signed commits will not be verified. To resolve the problem either update `user.email` to match the email address of your github user account, or add the relevant email address from `user.email`to your github user account.
+Note that, in the output of the above command `user.email` should be one of the email addresses that is assigned to your github user account. If not, you should either update `user.email` to match the email address of your github user account, or add the relevant email address from `user.email`to your github user account.
 
 You can upload the PGP Public Key to github, following the guidance at https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account. The following command will export the PGP Public Key in a format which can be pasted into github using the linked guidance:
 
