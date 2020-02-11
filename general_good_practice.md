@@ -5,7 +5,7 @@ This page provides local policy and guidance for managing and using open-source 
 This page covers the following topics:
 * [Repository Management Approach](#management)
 * [Githooks](#githooks)
-* [Code Signing](#code_signing)
+* [Code Signing](#code-signing)
 
 ## Management
 
