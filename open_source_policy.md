@@ -37,7 +37,10 @@ Sensitive reference information can take several forms. A non-exhaustive list of
 1. Information which refers explicitly to other DWP projects, or which could reasonably be used to identify other DWP projects.<a href="#note2" id="note2ref"><sup>2</sup></a>.
 1. Information marked as OFFICIAL-SENSITIVE or higher, as per the [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications).
 1. IP Addresses (note that DWP considers these to be OFFICIAL-SENSITIVE)<a href="#note3" id="note3ref"><sup>3</sup></a>.
-1. Service information which could enable an attacker to identify service vulnerabilities (software versions and patch levels, etc).
+1. Service information which could enable an attacker to identify service vulnerabilities (software versions and patch levels, etc). However, often exact versions of packages and dependencies are required. These can be permitted when other controls are in place. The following can be used to mitigate this risk:
+    1. Encrypt files containing specific versions (e.g. `package-lock.json`) using [git-secret](https://git-secret.io)
+    1. Application/service is not publicly accessible
+    1. Vulnerability scanning and automatic patching is in place. **NOTE:** this is not adequate on its own as vulnerabilities often don't immediately have a patch available
 1. Security-specific information (results of security audits, exceptions to security policy, information on bespoke security controls, etc)
 1. Information limited by [corporate restrictions](#corporate-restrictions) or [commercial restrictions](#commercial-restrictions)
 
