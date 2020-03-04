@@ -34,6 +34,7 @@ Sensitive reference information can take several forms. A non-exhaustive list of
 1. Personal data or any other information detailed within the [legal restrictions](#legal-restrictions) section of this document.
 1. User credentials (usernames, passwords, secret access keys, private keys, QR codes, etc).
 1. Information which identifies specific accounts or resources (AWS Account numbers including within ARNs, S3 bucket names, etc). For the avoidance of doubt, it is fine to substitute obviously-made-up dummy values for the real values where necessary.
+1. Hard-coded values being used to simulate prospective endpoints should be removed, or replaced with dummy values, where account specific.
 1. Information marked as OFFICIAL-SENSITIVE or higher, as per the [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications).
 1. IP Addresses (note that DWP considers these to be OFFICIAL-SENSITIVE).
 1. Service information which could enable an attacker to identify service vulnerabilities (software versions and patch levels, etc).
