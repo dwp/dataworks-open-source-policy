@@ -72,10 +72,10 @@ This document is made available under [the Open Government Licence v3.0](https:/
 
 
 ## Footnotes
-_<a id="note1" href="#note1ref"><sup>1</sup></a>For the avoidance of doubt, it is fine to substitute obviously-made-up dummy values for the real values of AWS Account Numbers etc where necessary.</br>_
-_<a id="note2" href="#note2ref"><sup>2</sup></a>References to other DWP project policies or links to shared workspaces are OK.</br>_
-_<a id="note3" href="#note3ref"><sup>3</sup></a>Clearly, some exceptions to the IP Address restriction are appropriate. For example, if config needs to refer to the aggregate RFC1918 address space in it's entirety, then this would be fine. Similarly, well-known link-local IP addresses for Standard AWS services would be OK to commit to code. That said, there's a good practice argument that such things should probably still be referred to from parameters so that code can change in a flexible way (e.g. to accommodate a change from using 172.16.0.0/12 to 10.0.0.0/8, to increase the private address space available for internal use)._</br>
-_<a id="note4" href="#note4ref"><sup>4</sup></a>Often exact versions of packages and dependencies are required. These can be permitted when other controls are in place. The following can be used to mitigate this risk:_
+_<a id="note1" href="#note1ref"><sup>1</sup></a> For the avoidance of doubt, it is fine to substitute obviously-made-up dummy values for the real values of AWS Account Numbers etc where necessary.</br>_
+_<a id="note2" href="#note2ref"><sup>2</sup></a> References to other DWP project policies or links to shared workspaces are OK.</br>_
+_<a id="note3" href="#note3ref"><sup>3</sup></a> Clearly, some exceptions to the IP Address restriction are appropriate. For example, if config needs to refer to the aggregate RFC1918 address space in it's entirety, then this would be fine. Similarly, well-known link-local IP addresses for Standard AWS services would be OK to commit to code. That said, there's a good practice argument that such things should probably still be referred to from parameters so that code can change in a flexible way (e.g. to accommodate a change from using 172.16.0.0/12 to 10.0.0.0/8, to increase the private address space available for internal use)._</br>
+_<a id="note4" href="#note4ref"><sup>4</sup></a> Often exact versions of packages and dependencies are required. These can be permitted when other controls are in place. The following can be used to mitigate this risk:_
 1. _Defence-in-Depth (need to exploit multiple vulnerabilities at the same time to compromise any given resource)_
   1. _Encrypt files containing specific versions (e.g. `package-lock.json`)_
   1. _Application/service is not publicly accessible_
