@@ -9,13 +9,13 @@ This page covers the following topics:
 
 ## Workflow Tools
 
-Workflow tools such as CircleCI and Github Actions provide essential PR checks to effectively manage changes to repositories. The code for the repository workflow should be managed in the same way as all other code for the repository, requiring code owner review in order to commit any changes.
+Workflow tools such as CircleCI and Github Actions provide essential PR checks to effectively manage changes to code within repositories. The code for the repository workflow should be managed in the same way as all other code for the repository, requiring code owner review in order to commit any changes.
 
-Care should be taken to avoid trying to conduct potentially dangerous actions. For example, do not output any sensitive values (e.g. values retrieved from secret stores) - some tools such as github secrets will automatically prevent this but the workflow should not try to. Be aware that anyone can raise a PR, causing the workflow to run and potentially exploiting any weakness.
+Care should be taken to avoid trying to conduct potentially dangerous actions. For example, do not output any sensitive values (e.g. values retrieved from secret stores) - some tools such as GitHub Secrets will automatically prevent this but the workflow should not try to. Be aware that anyone can raise a PR, causing the workflow to run and potentially exploiting any weakness.
 
-Some local and third party actions provide useful functions (e.g. Snyk), so should be enabled. However, careful consideration shoudl be given to which third party actions are used, considering not only how useful the tool is, but also whether it is actively maintained and whether the relevant third party has a suitably robust security posture.
+Some third parties provide useful functions, such as Actions for GitHub and Orbs for Circle CI (e.g. Snyk), so should be enabled. However, careful consideration shoudl be given to which third party actions are used, considering not only how useful the tool is, but also whether it is actively maintained and whether the relevant third party has a suitably robust security posture.
 
-Things such as self-hosted runners, which enable arbitrary parties to fork repository code and then use pull requests to run arbitrary workflows, should **never** be used.
+Things such as self-hosted runners for GitHub Actions and "Build forked pull requests" in CircleCI, which enable arbitrary parties to fork repository code and then use pull requests to run arbitrary workflows, should **never** be used.
 
 
 ## Workflow Secrets
