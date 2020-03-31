@@ -20,10 +20,13 @@ Things such as self-hosted runners for GitHub Actions and "Build forked pull req
 
 ## Workflow Secrets
 
-Secrets management tools and their cryptographic components are notoriously difficult to assure without specific specialist skills. Snake oil is common, and even well-intentioned tools can easily have conceptual flaws (poor maths) or implementation flaws (e.g. side channels). As per normal security architecture practice, defence-in-depth should be employed wherever possible to manage this risk. Also, secrets such as tokens should always be configured with the minimum privileges to support the required function.
+Secrets management tools and their cryptographic components are notoriously difficult to assure without specific specialist skills. Snake oil is common, and even well-intentioned tools can easily have conceptual flaws (poor maths) or implementation flaws (e.g. side channels). The following good security practices should be followed to mitigate these cryptographic risks:
+* As per normal security architecture practice, defence-in-depth should be employed wherever possible to manage the risk of a single control failing.
+* Secrets such as tokens should always be configured with the minimum privileges to support the required function.
 
 As a minimum, any secrets management tool to be used should meet **all of the following criteria**:
 * Secrets are not passed to workflows that are triggered by forked PRs.
 * Secrets are not committed to workflow logs.
-* Secrets cannot be used to enable insecure actions (e.g. echo)
+* Secrets can be managed in code using environment variables, so that command line processes that might be logged can be avoided.
+* Secrets cannot be used to enable insecure actions (e.g. echo). Where this control cannot be technically enforced, good practice should be rigorously applied by developers and administrators and subject to scrupulous review.
 * Secrets are encrypted using a one-way function (e.g. PKI) to provide a high degree of assurance that they cannot be retrieved, except by the specific target processes which have the appropriate cryptographic keymat to retrieve them.
