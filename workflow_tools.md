@@ -20,7 +20,7 @@ Things such as self-hosted runners for GitHub Actions and "Build forked pull req
 
 ## Workflow Secrets
 
-Secrets management tools and their cryptographic components are notoriously difficult to assure without specific specialist skills. Snake oil is common, and even well-intentioned tools can easily have conceptual flaws (poor maths) or implementation flaws (e.g. side channels). The following good security practices should be followed to mitigate these cryptographic risks:
+Secrets management tools and their cryptographic components are notoriously difficult to assure. Bugs could be present and errors might have been made in it's creation. These might include, for example: conceptual flaws such as poor maths; or implementation flaws such as side channels. We should try to follow the below good security practices to mitigate these cryptographic risks:
 * As per normal security architecture practice, defence-in-depth should be employed wherever possible to manage the risk of a single control failing.
 * Secrets such as tokens should always be configured with the minimum privileges to support the required function.
 
