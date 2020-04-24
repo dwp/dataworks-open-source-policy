@@ -59,4 +59,6 @@ Now you can push signed commits. The -S option is used to signed code as per the
 
 `git commit -S -m “[COMMIT MESSAGE]”`
 
+If you get an error about signing commits, you may also need to run `export GPG_TTY=$(tty)` and/or add that to your `~/.bashrc` or `˜/.bash_profile`
+
 Finally, if you are having problems getting this to work, then the following gist provides some useful troubleshooting advice: https://gist.github.com/cezaraugusto/2c91d141ddec026753051ffcace3f1f2
