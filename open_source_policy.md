@@ -28,19 +28,21 @@ All legal instruments are obviously of relevance, but [the General Data Protecti
 
 ## Security Restrictions
 
-Reference information which could be used to support targetted attacks on DataWorks or other DWP resources must not be published in open repositories.
+Sensitive user or service information, or other sensitive reference information which could be used to support targetted attacks on DataWorks or other DWP resources must not be published in open repositories.
 
-Sensitive reference information can take several forms. A non-exhaustive list of these is provided below:
-
+Sensitive user and service information can take several forms. A non-exhaustive list of these is provided below:
 1. Personal data or any other information detailed within the [legal restrictions](#legal-restrictions) section of this document.
 1. User credentials (usernames, passwords, secret access keys, private keys, QR codes, etc).
-1. Information which identifies specific accounts or resources (AWS Account numbers including within ARNs, S3 bucket names, etc)<a href="#note1" id="note1ref"><sup>1</sup></a>.
-1. Information which refers explicitly to other DWP projects, or which could reasonably be used to identify other DWP projects.<a href="#note2" id="note2ref"><sup>2</sup></a>.
 1. Information marked as OFFICIAL-SENSITIVE or higher, as per the [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications).
-1. IP Addresses (note that DWP considers these to be OFFICIAL-SENSITIVE)<a href="#note3" id="note3ref"><sup>3</sup></a>.
-1. Service information which could enable an attacker to identify service vulnerabilities (software versions and patch levels, etc) unless suitable compensating controls are in place <sup>4</sup></a>.
 1. Security-specific information (results of security audits, exceptions to security policy, information on bespoke security controls, etc)
 1. Information limited by [corporate restrictions](#corporate-restrictions) or [commercial restrictions](#commercial-restrictions)
+
+Sensitive reference information can also take several forms. A non-exhaustive list of these is provided below:
+
+1. Information which identifies specific accounts or resources (AWS Account numbers including within ARNs, S3 bucket names, etc)<a href="#note1" id="note1ref"><sup>1</sup></a>.
+1. Information which refers explicitly to other DWP projects, or which could reasonably be used to identify other DWP projects.<a href="#note2" id="note2ref"><sup>2</sup></a>.
+1. IP Addresses (note that DWP considers these to be OFFICIAL-SENSITIVE)<a href="#note3" id="note3ref"><sup>3</sup></a>.
+1. Service information which could enable an attacker to identify service vulnerabilities (software versions and patch levels, etc) unless suitable compensating controls are in place <sup>4</sup></a>.
 
 
 ## Corporate Restrictions
