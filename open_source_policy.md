@@ -43,7 +43,7 @@ Sensitive reference information can also take several forms. A non-exhaustive li
 1. Information which refers explicitly to other DWP projects, or which could reasonably be used to identify other DWP projects.<a href="#note2" id="note2ref"><sup>2</sup></a>.
 1. IP Addresses (note that DWP considers these to be OFFICIAL-SENSITIVE)<a href="#note3" id="note3ref"><sup>3</sup></a>.
 1. Service information which could enable an attacker to identify service vulnerabilities (software versions and patch levels, etc) unless suitable compensating controls are in place <sup>4</sup></a>.
-1. Information which could enable social engineering of dataworks users and/or administrators (e.g. standard email or other notification templates).
+1. Information which could enable social engineering of users and/or administrators (e.g. standard email or other notification templates).
 
 
 ## Corporate Restrictions
