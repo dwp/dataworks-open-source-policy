@@ -30,20 +30,39 @@ All legal instruments are obviously of relevance, but [the General Data Protecti
 
 Sensitive user or service information, or other sensitive reference information which could be used to support targetted attacks on DataWorks or other DWP resources must not be published in open repositories.
 
-__Sensitive user and service information should not be committed to code__. This information can take several forms; a non-exhaustive list of these is provided below:
+### Sensitive user and service information should never be committed to code
+
+Sensitive user and service information can take several forms; a non-exhaustive list of these is provided below:
 1. Personal data or any other information detailed within the [legal restrictions](#legal-restrictions) section of this document.
 1. User credentials (usernames, passwords, secret access keys, private keys, QR codes, etc).
 1. Information marked as OFFICIAL-SENSITIVE or higher, as per the [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications).
 1. Security-specific information (results of security audits, exceptions to security policy, information on bespoke security controls, etc)
 1. Information limited by [corporate restrictions](#corporate-restrictions) or [commercial restrictions](#commercial-restrictions)
 
-__Sensitive reference information should be either stored in private repositories or parameterised__. This information can take several forms; a non-exhaustive list of these is provided below:
+### Sensitive reference information should be either stored in private repositories or parameterised
 
-1. Information which identifies specific accounts or resources (AWS Account numbers including within ARNs, S3 bucket names, etc)<a href="#note1" id="note1ref"><sup>1</sup></a>.
-1. Information which refers explicitly to other DWP projects, or which could reasonably be used to identify other DWP projects.<a href="#note2" id="note2ref"><sup>2</sup></a>.
-1. IP Addresses (note that DWP considers these to be OFFICIAL-SENSITIVE)<a href="#note3" id="note3ref"><sup>3</sup></a>.
-1. Service information which could enable an attacker to identify service vulnerabilities (software versions and patch levels, etc) unless suitable compensating controls are in place <sup>4</sup></a>.
-1. Information which could enable social engineering of users and/or administrators (e.g. standard email or other notification templates).
+Sensitive reference information information can take several forms; discussion of a non-exhaustive set of these is provided below:
+* Information which identifies specific accounts or resources:
+  * This includes things like AWS Account numbers (including within ARNs), S3 bucket names, KMS Key IDs, etc.
+  * For the avoidance of doubt, it is fine to substitute obviously-made-up dummy values for the real values of AWS Account Numbers etc where necessary.
+
+* Information which refers explicitly to other DWP projects, or which could reasonably be used to identify other DWP projects:
+  * References to other DWP project policies or links to shared workspaces are OK.
+
+* IP Addresses (note that DWP considers these to be OFFICIAL-SENSITIVE)
+  * Clearly, some exceptions to the IP Address restriction are appropriate. For example, if config needs to refer to the aggregate RFC1918 address space in it's entirety, then this would be fine. Similarly, well-known link-local IP addresses for Standard AWS services would be OK to commit to code. That said, there's a good practice argument that such things should probably still be referred to from parameters so that code can change in a flexible way (e.g. to accommodate a change from using 172.16.0.0/12 to 10.0.0.0/8, to increase the private address space available for internal use).
+
+* Service information which could enable an attacker to identify service vulnerabilities (software versions and patch levels, etc) unless suitable compensating controls are in place. Often exact versions of packages and dependencies are required. These can be permitted when other controls are in place. The following can be used to mitigate this risk:
+  * Defence-in-Depth (need to exploit multiple vulnerabilities at the same time to compromise any given resource)
+  * Encrypt files containing specific versions (e.g. `package-lock.json`)
+  * Application/service is not publicly accessible
+  * Efficient Vulnerability Management
+  * Vulnerability scanning and automatic patching is in place. **NOTE:** this is not adequate on its own as vulnerabilities often don't immediately have a patch available
+  * Complete Mediation so that compromise of one resource does not automatically provide the means to compromise others (eg strong IAM on a per-resource basis)
+  * Robust Accounting, Alerting & Audit on all resources, especially for high-value ones (e.g. WAF logging)
+
+* Information which could enable social engineering of users and/or administrators
+  * e.g. standard email or other notification templates).
 
 
 ## Corporate Restrictions
@@ -73,19 +92,3 @@ In all cases, the offending information must be removed and git history re-writt
 
 ## Licensing
 This document is made available under [the Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
-
-
-## Footnotes
-_<a id="note1" href="#note1ref"><sup>1</sup></a> For the avoidance of doubt, it is fine to substitute obviously-made-up dummy values for the real values of AWS Account Numbers etc where necessary.</br>_
-_<a id="note2" href="#note2ref"><sup>2</sup></a> References to other DWP project policies or links to shared workspaces are OK.</br>_
-_<a id="note3" href="#note3ref"><sup>3</sup></a> Clearly, some exceptions to the IP Address restriction are appropriate. For example, if config needs to refer to the aggregate RFC1918 address space in it's entirety, then this would be fine. Similarly, well-known link-local IP addresses for Standard AWS services would be OK to commit to code. That said, there's a good practice argument that such things should probably still be referred to from parameters so that code can change in a flexible way (e.g. to accommodate a change from using 172.16.0.0/12 to 10.0.0.0/8, to increase the private address space available for internal use)._</br>
-_<a id="note4" href="#note4ref"><sup>4</sup></a> Often exact versions of packages and dependencies are required. These can be permitted when other controls are in place. The following can be used to mitigate this risk:_
-1. _Defence-in-Depth (need to exploit multiple vulnerabilities at the same time to compromise any given resource)_
-  1. _Encrypt files containing specific versions (e.g. `package-lock.json`)_
-  1. _Application/service is not publicly accessible_
-1. _Efficient Vulnerability Management_
-  1. _Vulnerability scanning and automatic patching is in place. **NOTE:** this is not adequate on its own as vulnerabilities often don't immediately have a patch available_
-1. _Complete Mediation so that compromise of one resource does not automatically provide the means to compromise others (eg strong IAM on a per-resource basis)_
-1. _Robust Accounting, Alerting & Audit on all resources, especially for high-value ones (e.g. WAF logging)_
-
-
