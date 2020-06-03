@@ -71,4 +71,4 @@ Congratulations! You've now successfully erased all traces of the sensitive data
 
 Alas, the repository isn't the only place that one can find the sensitive data.  As all commits to master have to be first raised as PRs, GitHub also has a copy of the data in its list of PRs.
 
-There's no user-facing way to remove PRs. Instead, you need to ask GitHub's support team to remove them for us. Simply send an email to support@github.com, along the lines of "We've identified some sensitive information in PRs, please delete the following PRs: <urls>".  Once GitHub confirm the PRs have been removed, the associated ticket can closed on our side.
+There's no user-facing way to remove PRs. Instead, you need to ask GitHub's support team to remove them for us. As a repo admin, raise a support case here: [support.github.com/contact](https://support.github.com/contact) with the subject: "PR deletion due to sensitive information" and message: "We've identified some sensitive information in PRs, please delete the following PRs: <urls>".  Once GitHub confirm the PRs have been removed, the associated ticket can closed on our side.
