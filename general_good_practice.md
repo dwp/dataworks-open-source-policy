@@ -17,6 +17,14 @@ DataWorks open-source github repositories should always be created from code rat
 
 All DataWorks open-source github repositories are built in line with this policy, and configured from the following repository: https://github.com/dwp/dataworks-github-config
 
+
+## Vulnerability Scanning
+
+All repositories should be subject to regular automated vulnerability scanning (e.g. using Snyk and AWS Inspector), and vulnerabilities addressed in a timely fashion in line with the Vulnerability Management policy.
+
+In addition, all application repositories should be subject to regular automated code scanning using a suitable tool.
+
+
 ## Githooks
 
 Pre-commit hooks should be used to catch common patterns for sensitive data and prevent a commit from being pushed if this includes sensitive data.
