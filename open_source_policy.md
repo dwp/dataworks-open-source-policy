@@ -30,11 +30,12 @@ All legal instruments are obviously of relevance, but [the General Data Protecti
 
 Sensitive user or service information, or other sensitive reference information which could be used to support targetted attacks on DataWorks or other DWP resources must not be published in open repositories.
 
-### Sensitive user and service information should never be committed to code
+### Sensitive user and service information should never be committed to code, but should be parameterised instead.
 
 Sensitive user and service information can take several forms; a non-exhaustive list of these is provided below:
 1. Personal data or any other information detailed within the [legal restrictions](#legal-restrictions) section of this document.
 1. User credentials (usernames, passwords, secret access keys, private keys, QR codes, etc).
+1. Sensitive business logic, and/or other configuration details or business logic that relates to sensitive operations.
 1. Information marked as OFFICIAL-SENSITIVE or higher, as per the [Government Security Classifications](https://www.gov.uk/government/publications/government-security-classifications).
 1. Security-specific information (results of security audits, exceptions to security policy, information on bespoke security controls, etc)
 1. Information limited by [corporate restrictions](#corporate-restrictions) or [commercial restrictions](#commercial-restrictions)
@@ -45,6 +46,8 @@ Sensitive reference information information can take several forms; discussion o
 * Information which identifies specific accounts or resources:
   * This includes things like AWS Account numbers (including within ARNs), S3 bucket names, KMS Key IDs, etc.
   * For the avoidance of doubt, it is fine to substitute obviously-made-up dummy values for the real values of AWS Account Numbers etc where necessary.
+
+* Detailed documentation on the intended use cases of the business logic, and/or service components that may reveal sensitive policy intent.
 
 * Information which refers explicitly to other DWP projects, or which could reasonably be used to identify other DWP projects:
   * References to other DWP project policies or links to shared workspaces are OK.
