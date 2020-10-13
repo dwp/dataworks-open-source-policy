@@ -35,6 +35,8 @@ Pre-commit hooks in use by the DataWorks team are at: https://github.com/dwp/dat
 
 All code which is committed to open-source repositories must be signed. Some guidance on how to do this as below.
 
+However, if you are using a UC machine as well, then you must use the same email as it registered at UC GitHub Enterprise for the `dip` organisation. As-at Oct 2020, these have to be the `joebloggs@digital.uc.dwp.gov.uk` ones - otherwsie, you wil only be able to commit to public GitHub.
+
 ### Check GitHub
 
 First, make sure the email you wish to use is Verified in GitHub -> https://github.com/settings/emails
@@ -47,8 +49,8 @@ Check your global git settings locally, it should look like this;
 ```
 $ git config --global --list
 
-user.name=mark matthews
-user.email=mark.matthews@engineering.digital.dwp.gov.uk
+user.name=Joe Bloggs
+user.email=joebloggs@digital.uc.dwp.gov.uk
 user.signingkey=ACBDEFG123456ACBDEFG123456ACBDEFG123456
 commit.gpgsign=true
 ```
@@ -77,7 +79,7 @@ You should see a result like this
 ```
 sec   rsa4096/432143214321 2020-10-13 [SC]
       ACBDEFG123456ACBDEFG123456ACBDEFG123456
-uid                 [ultimate] MarkM (some description) <mark.matthews@engineering.digital.dwp.gov.uk>
+uid                 [ultimate] JoeBloggs (some description) <joebloggs@digital.uc.dwp.gov.uk>
 ssb   rsa4096/789123456789 2020-10-13 [E]
 ```
 
@@ -86,7 +88,6 @@ ssb   rsa4096/789123456789 2020-10-13 [E]
 Next you will need to instruct gith which gpg key to use for signing git commits, as follows:
 
 `git config --global user.signingkey <KEY-ID>` which in the sample above would be `ACBDEFG123456ACBDEFG123456ACBDEFG123456` (the long RSA key id)
-
 
 ### Copy local sigining key into GitHub
 
@@ -98,12 +99,21 @@ The following command will export the PGP Public Key in a format which can be pa
 
 Paste this into a new registered key at https://github.com/settings/keys
 
+### Update Bash profile
+
+Add the line `export GPG_TTY=$(tty)` to your `~/.bashrc` or `˜/.bash_profile`.
+
 ### TaDa
 
-Now you can push signed commits. The -S option is used to signed code as per the example below, but shouldn't be necessary since git config has been updated to sign by default:
+Now you can push signed commits. The -S option is used to signed code as per the example below, 
 
 `git commit -S -m “[COMMIT MESSAGE]”`
 
-If you get an error about signing commits, you may also need to run `export GPG_TTY=$(tty)` and/or add that to your `~/.bashrc` or `˜/.bash_profile`
+but shouldn't be necessary since git config has been updated to sign by default, so you should be able to do this:
 
-Finally, if you are having problems getting this to work, then the following gist provides some useful troubleshooting advice: https://gist.github.com/cezaraugusto/2c91d141ddec026753051ffcace3f1f2
+`git commit -m “[COMMIT MESSAGE]”`
+
+### Troubleshooting
+
+Finally, if you are having problems getting this to work, then the following gist provides some useful troubleshooting advice:
+* https://gist.github.com/cezaraugusto/2c91d141ddec026753051ffcace3f1f2
