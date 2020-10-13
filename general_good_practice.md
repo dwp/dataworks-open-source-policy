@@ -49,7 +49,7 @@ Check your global git settings locally, it should look like this;
 ```
 $ git config --global --list
 
-user.name=Jow Bloggs
+user.name=Joe Bloggs
 user.email=joebloggs@digital.uc.dwp.gov.uk
 user.signingkey=ACBDEFG123456ACBDEFG123456ACBDEFG123456
 commit.gpgsign=true
