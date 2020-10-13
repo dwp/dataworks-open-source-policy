@@ -35,33 +35,70 @@ Pre-commit hooks in use by the DataWorks team are at: https://github.com/dwp/dat
 
 All code which is committed to open-source repositories must be signed. Some guidance on how to do this as below.
 
-Use the following command to tell github to sign all commits by default:
+### Check GitHub
 
-`git config --global commit.gpgsign true`
+First, make sure the email you wish to use is Verified in GitHub -> https://github.com/settings/emails
 
-ONLY IF NECESSARY, use the following command to generate a gpg keypair. In general you should already have a gpg keypair from following the onboarding documents:
+Then, check your gpg keys listedin GitHub -> https://github.com/settings/keys
+
+### Check locally
+
+Check your global git settings locally, it should look like this;
+```
+$ git config --global --list
+
+user.name=mark matthews
+user.email=mark.matthews@engineering.digital.dwp.gov.uk
+user.signingkey=ACBDEFG123456ACBDEFG123456ACBDEFG123456
+commit.gpgsign=true
+```
+
+Note that, in the output of the above command `user.email` should be one of the verified email addresses that is assigned to your github user account. If not, you should either update `user.email` to match the email address of your github user account, or add the relevant email address from `user.email` to your github user account and verify it.
+
+`git config --global user.email <email>`
+
+### Make a new gpg key ONLY if you need to for your email
+
+ONLY IF NECESSARY, use the following command to generate a gpg keypair for the required emaoil address. In general you should already have a gpg keypair from following the onboarding documents:
+
+GitHubs instructions for this are good, see here: https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-gpg-key
 
 `gpg --full-generate-key`
 
-Note: you will need an RSA key for github, and this will need to be at least 4096 bits long. The email address will also need to match an email address associated with your github user account.
+Note: you will need an RSA key for github at least 4096 bits long. The email address will also need to match a verified email address associated with your github user account. 
 
-The following command will return the Key IDs for all your gpg keypairs, including the Key ID for the key which you wish to use:
+### Check local gpg keys
 
-`gpg --list-secret-keys`
+The following command will return the Key IDs for all your gpg keypairs, including the <KEY-ID> for the key which you wish to use:
 
-Next you will need to instruct github which gpg key to use for signing git commits, as follows:
+`gpg --list-secret-keys --keyid-format LONG`
 
-`git config --global user.signingkey [KEY ID]`
+You should see a result like this
+```
+sec   rsa4096/432143214321 2020-10-13 [SC]
+      ACBDEFG123456ACBDEFG123456ACBDEFG123456
+uid                 [ultimate] MarkM (some description) <mark.matthews@engineering.digital.dwp.gov.uk>
+ssb   rsa4096/789123456789 2020-10-13 [E]
+```
 
-At this point, it is probably prudent to check that the github config has been updated properly. The following command will help with this:
+### Configure local sigining key
 
-`git config --global --list`
+Next you will need to instruct gith which gpg key to use for signing git commits, as follows:
 
-Note that, in the output of the above command `user.email` should be one of the email addresses that is assigned to your github user account. If not, you should either update `user.email` to match the email address of your github user account, or add the relevant email address from `user.email`to your github user account.
+`git config --global user.signingkey <KEY-ID>` which in the sample above would be `ACBDEFG123456ACBDEFG123456ACBDEFG123456` (the long RSA key id)
 
-You can upload the PGP Public Key to github, following the guidance at https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account. The following command will export the PGP Public Key in a format which can be pasted into github using the linked guidance:
 
-`gpg --armor --export [KEY ID] > gpgkey.asc`
+### Copy local sigining key into GitHub
+
+You can upload the PGP Public Key to github, following the guidance at https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account. 
+
+The following command will export the PGP Public Key in a format which can be pasted into github using the linked guidance:
+
+`gpg --armor --export <KEY-ID>` which in the sample above would be `432143214321` (the short RSA key id)
+
+Paste this into a new registered key at https://github.com/settings/keys
+
+### TaDa
 
 Now you can push signed commits. The -S option is used to signed code as per the example below, but shouldn't be necessary since git config has been updated to sign by default:
 
