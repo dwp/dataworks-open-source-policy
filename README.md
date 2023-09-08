@@ -1,3 +1,5 @@
+# DO NOT USE THIS REPO - MIGRATED TO GITLAB
+
 # DataWorks Open Source Policy
 Policy and Guidance from the DWP DataWorks team on working with Open-Source code.
 
